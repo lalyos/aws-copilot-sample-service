@@ -10,6 +10,11 @@ function push(r) {
     r.return(200);
 }
 
+function vc(r) {
+    r.return(200, r.headersIn['Host'].split(".",1)[0]);
+}
+
+
 function set(r) {
     fs.writeFileSync(STORAGE, r.args.count);
     r.return(200);
@@ -46,4 +51,4 @@ function read(r) {
     r.return(200, data);
 }
 
-export default {push, set, flush, read, ready, version};
+export default {vc, push, set, flush, read, ready, version};

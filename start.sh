@@ -43,6 +43,9 @@ cat > /usr/share/nginx/html/index.html <<EOF
 $BODY
 
 <hr/>
+
+VC: <iframe src='/vc'></iframe>
+
 hostname: $HOSTNAME
 <br>
 <a href="/ready" target="_blank" >readiness</a>
